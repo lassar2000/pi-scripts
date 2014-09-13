@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIR="/mnt/google_drive"
+
+if [ "$(ls -A $DIR)" ]; then
+    cd $DIR
+    exit
+else
+    echo "!!!No insync folder. FULL STOP!!!"
+    service insync stop
+fi
